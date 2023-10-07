@@ -1,0 +1,1024 @@
+{
+    "species": [
+      {
+        "name": "anemone",
+        "sciName": "Actinia tenebrosa"
+      },
+      {
+        "name": "jellyfish",
+        "sciName": "Aurelia aurita"
+      },
+      {
+        "name": "earthworm",
+        "sciName": "Lumbricus terrestris"
+      },
+      {
+        "name": "leech",
+        "sciName": "Hirudo medicinalis"
+      },
+      {
+        "name": "snail",
+        "sciName": "Helix pomatia"
+      },
+      {
+        "name": "mussel",
+        "sciName": "Mytilus edulis"
+      },
+      {
+        "name": "sea clam",
+        "sciName": "Spisula solidissima"
+      },
+      {
+        "name": "cuttlefish",
+        "sciName": "Sepia officinalis"
+      },
+      {
+        "name": "lobster",
+        "sciName": "Homarus gammarus"
+      },
+      {
+        "name": "black widow",
+        "sciName": "Latrodectus tredecimguttatus"
+      },
+      {
+        "name": "cockroach",
+        "sciName": "Periplaneta americana"
+      },
+      {
+        "name": "grasshopper",
+        "sciName": "Schistocerca americana"
+      },
+      {
+        "name": "locust",
+        "sciName": "Schistocerca gregaria"
+      },
+      {
+        "name": "stick bug",
+        "sciName": "Carausius morosus"
+      },
+      {
+        "name": "firefly",
+        "sciName": "Nipponoluciola cruciata"
+      },
+      {
+        "name": "silkworm",
+        "sciName": "Bombyx mori"
+      },
+      {
+        "name": "mosquito",
+        "sciName": "Aedes aegypti"
+      },
+      {
+        "name": "fruit fly",
+        "sciName": "Drosophila melanogaster"
+      },
+      {
+        "name": "house fly",
+        "sciName": "Musca domestica"
+      },
+      {
+        "name": "hornet",
+        "sciName": "Vespa crabro"
+      },
+      {
+        "name": "honey bee",
+        "sciName": "Apis mellifera"
+      },
+      {
+        "name": "praying mantis",
+        "sciName": "Mantis religiosa"
+      },
+      {
+        "name": "starfish",
+        "sciName": "Asterias rubens"
+      },
+      {
+        "name": "sea urchin",
+        "sciName": "Strongylocentrotus droebachiensis"
+      },
+      {
+        "name": "tiger shark",
+        "sciName": "Galeocerdo cuvier"
+      },
+      {
+        "name": "goldfish",
+        "sciName": "Carassius auratus"
+      },
+      {
+        "name": "carp",
+        "sciName": "Cyprinus carpio"
+      },
+      {
+        "name": "catfish",
+        "sciName": "Ictalurus punctatus"
+      },
+      {
+        "name": "electric eel",
+        "sciName": "Electrophorus electricus"
+      },
+      {
+        "name": "trout",
+        "sciName": "Oncorhynchus mykiss"
+      },
+      {
+        "name": "salmon",
+        "sciName": "Salmo salar"
+      },
+      {
+        "name": "cod",
+        "sciName": "Gadus morhua"
+      },
+      {
+        "name": "anglerfish",
+        "sciName": "Lophius piscatorius"
+      },
+      {
+        "name": "guppy",
+        "sciName": "Poecilia reticulata"
+      },
+      {
+        "name": "tuna",
+        "sciName": "Thunnus albacares"
+      },
+      {
+        "name": "swordfish",
+        "sciName": "Xiphias gladius"
+      },
+      {
+        "name": "axolotl",
+        "sciName": "Ambystoma mexicanum"
+      },
+      {
+        "name": "toad",
+        "sciName": "Bufo bufo"
+      },
+      {
+        "name": "bullfrog",
+        "sciName": "Aquarana catesbeiana"
+      },
+      {
+        "name": "snapping turtle",
+        "sciName": "Chelydra serpentina"
+      },
+      {
+        "name": "alligator",
+        "sciName": "Alligator mississippiensis"
+      },
+      {
+        "name": "crocodile",
+        "sciName": "Crocodylus porosus"
+      },
+      {
+        "name": "iguana",
+        "sciName": "Iguana iguana"
+      },
+      {
+        "name": "gila monster",
+        "sciName": "Heloderma suspectum"
+      },
+      {
+        "name": "boa constrictor",
+        "sciName": "Boa constrictor"
+      },
+      {
+        "name": "black mamba",
+        "sciName": "Dendroaspis polylepis"
+      },
+      {
+        "name": "king cobra",
+        "sciName": "Ophiophagus hannah"
+      },
+      {
+        "name": "sea snake",
+        "sciName": "Hydrophis platurus"
+      },
+      {
+        "name": "viper",
+        "sciName": "Cerastes cerastes"
+      },
+      {
+        "name": "rattlesnake",
+        "sciName": "Crotalus atrox"
+      },
+      {
+        "name": "emu",
+        "sciName": "Dromaius novaehollandiae"
+      },
+      {
+        "name": "ostrich",
+        "sciName": "Struthio camelus"
+      },
+      {
+        "name": "duck",
+        "sciName": "Anas platyrhynchos"
+      },
+      {
+        "name": "goose",
+        "sciName": "Branta canadensis"
+      },
+      {
+        "name": "swan",
+        "sciName": "Coscoroba coscoroba"
+      },
+      {
+        "name": "condor",
+        "sciName": "Vultur gryphus"
+      },
+      {
+        "name": "falcon",
+        "sciName": "Falco peregrinus"
+      },
+      {
+        "name": "vulture",
+        "sciName": "Aegypius monachus"
+      },
+      {
+        "name": "chicken",
+        "sciName": "Gallus gallus"
+      },
+      {
+        "name": "pheasant",
+        "sciName": "Lophura bulweri"
+      },
+      {
+        "name": "peacock",
+        "sciName": "Pavo cristatus"
+      },
+      {
+        "name": "turkey",
+        "sciName": "Meleagris gallopavo"
+      },
+      {
+        "name": "blackbird",
+        "sciName": "Turdus merula"
+      },
+      {
+        "name": "emperor penguin",
+        "sciName": "Aptenodytes forsteri"
+      },
+      {
+        "name": "platypus",
+        "sciName": "Ornithorhynchus anatinus"
+      },
+      {
+        "name": "echidna",
+        "sciName": "Tachyglossus aculeatus"
+      },
+      {
+        "name": "opossum",
+        "sciName": "Didelphis marsupialis"
+      },
+      {
+        "name": "tasmanian devil",
+        "sciName": "Sarcophilus harrisii"
+      },
+      {
+        "name": "kangaroo",
+        "sciName": "Osphranter rufus"
+      },
+      {
+        "name": "possum",
+        "sciName": "Pseudocheirus peregrinus"
+      },
+      {
+        "name": "hedgehog",
+        "sciName": "Erinaceus europaeus"
+      },
+      {
+        "name": "mole",
+        "sciName": "Talpa europaea"
+      },
+      {
+        "name": "vampire bat",
+        "sciName": "Desmodus rotundus"
+      },
+      {
+        "name": "lemur",
+        "sciName": "Lemur catta"
+      },
+      {
+        "name": "macaque",
+        "sciName": "Macaca fuscata"
+      },
+      {
+        "name": "mandrill",
+        "sciName": "Mandrillus sphinx"
+      },
+      {
+        "name": "gorilla",
+        "sciName": "Gorilla gorilla"
+      },
+      {
+        "name": "bonobo",
+        "sciName": "Pan paniscus"
+      },
+      {
+        "name": "chimpanzee",
+        "sciName": "Pan troglodytes"
+      },
+      {
+        "name": "orangutan",
+        "sciName": "Pongo abelii"
+      },
+      {
+        "name": "human",
+        "sciName": "Homo sapiens"
+      },
+      {
+        "name": "wolf",
+        "sciName": "Canis lupus"
+      },
+      {
+        "name": "coyote",
+        "sciName": "Canis latrans"
+      },
+      {
+        "name": "red fox",
+        "sciName": "Vulpes vulpes"
+      },
+      {
+        "name": "black bear",
+        "sciName": "Ursus americanus"
+      },
+      {
+        "name": "brown bear",
+        "sciName": "Ursus arctos"
+      },
+      {
+        "name": "giant panda",
+        "sciName": "Ailuropoda melanoleuca"
+      },
+      {
+        "name": "red panda",
+        "sciName": "Ailurus fulgens"
+      },
+      {
+        "name": "raccoon",
+        "sciName": "Procyon lotor"
+      },
+      {
+        "name": "mink",
+        "sciName": "Mustela lutreola"
+      },
+      {
+        "name": "hyena",
+        "sciName": "Crocuta crocuta"
+      },
+      {
+        "name": "cat",
+        "sciName": "Felis catus"
+      },
+      {
+        "name": "lion",
+        "sciName": "Panthera leo"
+      },
+      {
+        "name": "jaguar",
+        "sciName": "Panthera onca"
+      },
+      {
+        "name": "leopard",
+        "sciName": "Panthera pardus"
+      },
+      {
+        "name": "tiger",
+        "sciName": "Panthera tigris"
+      },
+      {
+        "name": "puma",
+        "sciName": "Puma concolor"
+      },
+      {
+        "name": "mongoose",
+        "sciName": "Herpestes ichneumon"
+      },
+      {
+        "name": "sea lion",
+        "sciName": "Zalophus californianus"
+      },
+      {
+        "name": "walrus",
+        "sciName": "Odobenus rosmarus"
+      },
+      {
+        "name": "seal",
+        "sciName": "Halichoerus grypus"
+      },
+      {
+        "name": "orca",
+        "sciName": "Orcinus orca"
+      },
+      {
+        "name": "dolphin",
+        "sciName": "Tursiops truncatus"
+      },
+      {
+        "name": "beluga whale",
+        "sciName": "Delphinapterus leucas"
+      },
+      {
+        "name": "sperm whale",
+        "sciName": "Physeter catodon"
+      },
+      {
+        "name": "humpback whale",
+        "sciName": "Megaptera novaeangliae"
+      },
+      {
+        "name": "manatee",
+        "sciName": "Trichechus manatus"
+      },
+      {
+        "name": "elephant",
+        "sciName": "Loxodonta africana"
+      },
+      {
+        "name": "donkey",
+        "sciName": "Equus asinus"
+      },
+      {
+        "name": "horse",
+        "sciName": "Equus caballus"
+      },
+      {
+        "name": "rhinoceros",
+        "sciName": "Ceratotherium simum"
+      },
+      {
+        "name": "aardvark",
+        "sciName": "Orycteropus afer"
+      },
+      {
+        "name": "pig",
+        "sciName": "Sus scrofa"
+      },
+      {
+        "name": "hippopotamus",
+        "sciName": "Hippopotamus amphibius"
+      },
+      {
+        "name": "camel",
+        "sciName": "Camelus dromedarius"
+      },
+      {
+        "name": "llama",
+        "sciName": "Lama glama"
+      },
+      {
+        "name": "moose",
+        "sciName": "Alces alces"
+      },
+      {
+        "name": "caribou",
+        "sciName": "Rangifer tarandus"
+      },
+      {
+        "name": "deer",
+        "sciName": "Odocoileus virginianus"
+      },
+      {
+        "name": "giraffe",
+        "sciName": "Giraffa camelopardalis"
+      },
+      {
+        "name": "bison",
+        "sciName": "Bison bison"
+      },
+      {
+        "name": "cattle",
+        "sciName": "Bos taurus"
+      },
+      {
+        "name": "goat",
+        "sciName": "Capra hircus"
+      },
+      {
+        "name": "sheep",
+        "sciName": "Ovis aries"
+      },
+      {
+        "name": "pangolin",
+        "sciName": "Manis javanica"
+      },
+      {
+        "name": "rabbit",
+        "sciName": "Oryctolagus cuniculus"
+      },
+      {
+        "name": "groundhog",
+        "sciName": "Marmota monax"
+      },
+      {
+        "name": "hamster",
+        "sciName": "Mesocricetus auratus"
+      },
+      {
+        "name": "gerbil",
+        "sciName": "Meriones unguiculatus"
+      },
+      {
+        "name": "mouse",
+        "sciName": "Mus musculus"
+      },
+      {
+        "name": "porcupine",
+        "sciName": "Hystrix africaeaustralis"
+      },
+      {
+        "name": "guinea pig",
+        "sciName": "Cavia porcellus"
+      },
+      {
+        "name": "capybara",
+        "sciName": "Hydrochoerus hydrochaeris"
+      },
+      {
+        "name": "cockatoo",
+        "sciName": "Cacatua goffiniana"
+      },
+      {
+        "name": "monarch butterfly",
+        "sciName": "Danaus plexippus"
+      },
+      {
+        "name": "earwig",
+        "sciName": "Forficula auricularia"
+      },
+      {
+        "name": "lynx",
+        "sciName": "Lynx lynx"
+      },
+      {
+        "name": "cockatiel",
+        "sciName": "Nymphicus hollandicus"
+      },
+      {
+        "name": "pillbug",
+        "sciName": "Armadillidium vulgare"
+      },
+      {
+        "name": "great white shark",
+        "sciName": "Carcharodon carcharias"
+      },
+      {
+        "name": "fire ant",
+        "sciName": "Solenopsis invicta"
+      },
+      {
+        "name": "two-toed sloth",
+        "sciName": "Choloepus didactylus"
+      },
+      {
+        "name": "bass",
+        "sciName": "Micropterus salmoides"
+      },
+      {
+        "name": "sea turtle",
+        "sciName": "Dermochelys coriacea"
+      },
+      {
+        "name": "puffin",
+        "sciName": "Fratercula arctica"
+      },
+      {
+        "name": "blue jay",
+        "sciName": "Cyanocitta cristata"
+      },
+      {
+        "name": "centipede",
+        "sciName": "Scutigera coleoptrata"
+      },
+      {
+        "name": "polar bear",
+        "sciName": "Ursus maritimus"
+      },
+      {
+        "name": "wombat",
+        "sciName": "Vombatus ursinus"
+      },
+      {
+        "name": "oyster",
+        "sciName": "Crassostrea gigas"
+      },
+      {
+        "name": "wasp",
+        "sciName": "Vespula pensylvanica"
+      },
+      {
+        "name": "yak",
+        "sciName": "Bos grunniens"
+      },
+      {
+        "name": "alpaca",
+        "sciName": "Vicugna pacos"
+      },
+      {
+        "name": "skunk",
+        "sciName": "Mephitis mephitis"
+      },
+      {
+        "name": "badger",
+        "sciName": "Taxidea taxus"
+      },
+      {
+        "name": "squirrel",
+        "sciName": "Sciurus carolinensis"
+      },
+      {
+        "name": "cheetah",
+        "sciName": "Acinonyx jubatus"
+      },
+      {
+        "name": "ocelot",
+        "sciName": "Leopardus pardalis"
+      },
+      {
+        "name": "bigfin squid",
+        "sciName": "Sepioteuthis lessoniana"
+      },
+      {
+        "name": "nautilus",
+        "sciName": "Nautilus belauensis"
+      },
+      {
+        "name": "sea otter",
+        "sciName": "Enhydra lutris"
+      },
+      {
+        "name": "magpie",
+        "sciName": "Pica pica"
+      },
+      {
+        "name": "seagull",
+        "sciName": "Larus argentatus"
+      },
+      {
+        "name": "salamander",
+        "sciName": "Hynobius retardatus"
+      },
+      {
+        "name": "termite",
+        "sciName": "Coptotermes formosanus"
+      },
+      {
+        "name": "meerkat",
+        "sciName": "Suricata suricatta"
+      },
+      {
+        "name": "antelope",
+        "sciName": "Hippotragus niger"
+      },
+      {
+        "name": "capuchin",
+        "sciName": "Cebus olivaceus"
+      },
+      {
+        "name": "finch",
+        "sciName": "Pyrrhula pyrrhula"
+      },
+      {
+        "name": "robin",
+        "sciName": "Erithacus rubecula"
+      },
+      {
+        "name": "gazelle",
+        "sciName": "Gazella dorcas"
+      },
+      {
+        "name": "koala",
+        "sciName": "Phascolarctos cinereus"
+      },
+      {
+        "name": "narwhal",
+        "sciName": "Monodon monoceros"
+      },
+      {
+        "name": "ladybug",
+        "sciName": "Coccinella septempunctata"
+      },
+      {
+        "name": "piranha",
+        "sciName": "Pygocentrus nattereri"
+      },
+      {
+        "name": "chipmunk",
+        "sciName": "Tamias striatus"
+      },
+      {
+        "name": "wolverine",
+        "sciName": "Gulo gulo"
+      },
+      {
+        "name": "sparrow",
+        "sciName": "Passer domesticus"
+      },
+      {
+        "name": "beaver",
+        "sciName": "Castor canadensis"
+      },
+      {
+        "name": "anaconda",
+        "sciName": "Eunectes murinus"
+      },
+      {
+        "name": "macaw",
+        "sciName": "Anodorhynchus hyacinthinus"
+      },
+      {
+        "name": "parakeet",
+        "sciName": "Aratinga nenday"
+      },
+      {
+        "name": "poison frog",
+        "sciName": "Oophaga histrionica"
+      },
+      {
+        "name": "bald eagle",
+        "sciName": "Haliaeetus leucocephalus"
+      },
+      {
+        "name": "weasel",
+        "sciName": "Mustela frenata"
+      },
+      {
+        "name": "barn owl",
+        "sciName": "Tyto alba"
+      },
+      {
+        "name": "kestrel",
+        "sciName": "Falco sparverius"
+      },
+      {
+        "name": "raven",
+        "sciName": "Corvus corax"
+      },
+      {
+        "name": "grey parrot",
+        "sciName": "Psittacus erithacus"
+      },
+      {
+        "name": "goblin shark",
+        "sciName": "Mitsukurina owstoni"
+      },
+      {
+        "name": "cricket",
+        "sciName": "Gryllus campestris"
+      },
+      {
+        "name": "mockingbird",
+        "sciName": "Mimus polyglottos"
+      },
+      {
+        "name": "komodo dragon",
+        "sciName": "Varanus komodoensis"
+      },
+      {
+        "name": "bobcat",
+        "sciName": "Lynx rufus"
+      },
+      {
+        "name": "gibbon",
+        "sciName": "Nomascus leucogenys"
+      },
+      {
+        "name": "atlas moth",
+        "sciName": "Attacus atlas"
+      },
+      {
+        "name": "tortoise",
+        "sciName": "Chelonoidis niger"
+      },
+      {
+        "name": "jackal",
+        "sciName": "Canis aureus"
+      },
+      {
+        "name": "barracuda",
+        "sciName": "Sphyraena barracuda"
+      },
+      {
+        "name": "river otter",
+        "sciName": "Lontra canadensis"
+      },
+      {
+        "name": "macaroni penguin",
+        "sciName": "Eudyptes chrysolophus"
+      },
+      {
+        "name": "anteater",
+        "sciName": "Cyclopes didactylus"
+      },
+      {
+        "name": "crow",
+        "sciName": "Corvus brachyrhynchos"
+      },
+      {
+        "name": "zebra",
+        "sciName": "Equus quagga"
+      },
+      {
+        "name": "water buffalo",
+        "sciName": "Bubalus bubalis"
+      },
+      {
+        "name": "chameleon",
+        "sciName": "Chamaeleo chamaeleon"
+      },
+      {
+        "name": "toucan",
+        "sciName": "Ramphastos toco"
+      },
+      {
+        "name": "baboon",
+        "sciName": "Papio papio"
+      },
+      {
+        "name": "blue-ringed octopus",
+        "sciName": "Hapalochlaena lunulata"
+      },
+      {
+        "name": "krill",
+        "sciName": "Euphausia pacifica"
+      },
+      {
+        "name": "carpenter ant",
+        "sciName": "Camponotus floridanus"
+      },
+      {
+        "name": "seahorse",
+        "sciName": "Hippocampus comes"
+      },
+      {
+        "name": "barnacle",
+        "sciName": "Balanus glandula"
+      },
+      {
+        "name": "mantis shrimp",
+        "sciName": "Odontodactylus scyllarus"
+      },
+      {
+        "name": "bumble bee",
+        "sciName": "Bombus impatiens"
+      },
+      {
+        "name": "dove",
+        "sciName": "Leptotila verreauxi"
+      },
+      {
+        "name": "box turtle",
+        "sciName": "Terrapene carolina"
+      },
+      {
+        "name": "clownfish",
+        "sciName": "Amphiprion percula"
+      },
+      {
+        "name": "canary",
+        "sciName": "Crithagra flaviventris"
+      },
+      {
+        "name": "dung beetle",
+        "sciName": "Scarabaeus sacer"
+      },
+      {
+        "name": "man o war",
+        "sciName": "Physalia physalis"
+      },
+      {
+        "name": "python",
+        "sciName": "Python bivittatus"
+      },
+      {
+        "name": "caiman",
+        "sciName": "Caiman latirostris"
+      },
+      {
+        "name": "hammerhead shark",
+        "sciName": "Sphyrna mokarran"
+      },
+      {
+        "name": "scorpion",
+        "sciName": "Centruroides sculpturatus"
+      },
+      {
+        "name": "brain coral",
+        "sciName": "Diploria labyrinthiformis"
+      },
+      {
+        "name": "flying squirrel",
+        "sciName": "Hylopetes nigripes"
+      },
+      {
+        "name": "giant squid",
+        "sciName": "Architeuthis dux"
+      },
+      {
+        "name": "tarantula",
+        "sciName": "Theraphosa blondi"
+      },
+      {
+        "name": "pigeon",
+        "sciName": "Hemiphaga novaeseelandiae"
+      },
+      {
+        "name": "giant octopus",
+        "sciName": "Enteroctopus dofleini"
+      },
+      {
+        "name": "millipede",
+        "sciName": "Oxidus gracilis"
+      },
+      {
+        "name": "gecko",
+        "sciName": "Lygodactylus capensis"
+      },
+      {
+        "name": "kiwi",
+        "sciName": "Apteryx rowi"
+      },
+      {
+        "name": "armadillo",
+        "sciName": "Chaetophractus vellerosus"
+      },
+      {
+        "name": "pufferfish",
+        "sciName": "Arothron meleagris"
+      },
+      {
+        "name": "snowy owl",
+        "sciName": "Bubo scandiacus"
+      },
+      {
+        "name": "nightingale",
+        "sciName": "Luscinia megarhynchos"
+      },
+      {
+        "name": "flamingo",
+        "sciName": "Phoenicopterus roseus"
+      },
+      {
+        "name": "prawn",
+        "sciName": "Crangon crangon"
+      },
+      {
+        "name": "rat",
+        "sciName": "Grammomys dolichurus"
+      },
+      {
+        "name": "arctic fox",
+        "sciName": "Vulpes lagopus"
+      },
+      {
+        "name": "fruit bat",
+        "sciName": "Acerodon jubatus"
+      },
+      {
+        "name": "sea cucumber",
+        "sciName": "Actinopyga echinites"
+      },
+      {
+        "name": "huntsman spider",
+        "sciName": "Heteropoda maxima"
+      },
+      {
+        "name": "hawk",
+        "sciName": "Accipiter gundlachi"
+      },
+      {
+        "name": "hermit crab",
+        "sciName": "Dardanus calidus"
+      },
+      {
+        "name": "hercules beetle",
+        "sciName": "Dynastes hercules"
+      },
+      {
+        "name": "sand dollar",
+        "sciName": "Mellita quinquiesperforata"
+      },
+      {
+        "name": "elk",
+        "sciName": "Cervus canadensis"
+      },
+      {
+        "name": "dragonfly",
+        "sciName": "Aeshna canadensis"
+      },
+      {
+        "name": "mayfly",
+        "sciName": "Rhithrogena germanica"
+      },
+      {
+        "name": "manta ray",
+        "sciName": "Mobula birostris"
+      },
+      {
+        "name": "banana slug",
+        "sciName": "Ariolimax columbianus"
+      },
+      {
+        "name": "sting ray",
+        "sciName": "Hypanus americanus"
+      }
+    ]
+  }
