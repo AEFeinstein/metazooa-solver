@@ -126,7 +126,12 @@ class treeNode:
                     break
         else:
             # Node has children, write the scientific name
-            self.name = nameDict[self.tax_id]
+            if self.tax_id == 7776:
+                self.name = "Gnathostomata"
+            elif self.tax_id == 35060:
+                self.name = "Gnathostomata-urchin"
+            else:
+                self.name = nameDict[self.tax_id]
 
         # For all children
         for child in self.children:
