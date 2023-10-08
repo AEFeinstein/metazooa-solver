@@ -110,12 +110,33 @@ class treeNode:
         for child in self.children:
             child.compressTree()
 
-    def printTree(self, nameDict: dict[int, str], mzNames, file):
-        """Print a tree in graphviz form
+    def addNamesToTree(self, nameDict: dict[int, str], mzNames):
+        """Add names to the nodes in the tree
 
         Args:
             nameDict (dict[int, str]): A dictionary from taxonomic ID to scientific name
             mzNames (_type_): A JSON object of metazooa names
+        """
+        # If this node has no children, print the common name
+        if 0 == len(self.children):
+            # Find the common name in mzNames by matching tax_id
+            for species in mzNames["species"]:
+                if species["tax_id"] == self.tax_id:
+                    self.name = species["name"]
+                    break
+        else:
+            # Node has children, write the scientific name
+            self.name = nameDict[self.tax_id]
+
+        # For all children
+        for child in self.children:
+            # Assign names recursively
+            child.addNamesToTree(nameDict, mzNames)
+
+    def printTreeDot(self, file):
+        """Print a tree in graphviz form
+
+        Args:
             file (_type_): The file to write to
         """
         # If this node has no children, print the common name
@@ -127,20 +148,46 @@ class treeNode:
                     file.write(
                         str(self.tax_id)
                         + ' [label="'
-                        + species["name"]
+                        + self.name
                         + '" style=filled fillcolor="gold"]\n'
                     )
                     break
         else:
             # Node has children, write the scientific name
-            file.write(str(self.tax_id) + ' [label="' + nameDict[self.tax_id] + '"]\n')
+            file.write(str(self.tax_id) + ' [label="' + self.name + '"]\n')
 
         # For all children
         for child in self.children:
             # Draw the link to the child
             file.write(str(self.tax_id) + " -> " + str(child.tax_id) + "\n")
             # Print recursively
-            child.printTree(nameDict, mzNames, file)
+            child.printTreeDot(file)
+
+    def printTreeJson(self, file):
+        """Print a tree in json form
+
+        Args:
+            file (_type_): The file to write to
+        """
+
+        file.write("{\n")
+        file.write('"name": "' + self.name + '",\n')
+        file.write('"id": "' + str(self.tax_id) + '"')
+        if 0 < len(self.children):
+            file.write(',\n"children": [')
+
+            first = True
+            for child in self.children:
+                if first:
+                    first = False
+                else:
+                    file.write(",")
+                child.printTreeJson(file)
+            file.write("]\n")
+        else:
+            file.write("\n")
+
+        file.write("}\n")
 
 
 # Read a list of all scientific names for metazooa species
@@ -174,6 +221,8 @@ for mzName in mzNames["species"]:
             mzName["tax_id"] = key
             break
 
+print("Taxonomic names linked")
+
 # Load an array of all taxonomic nodes
 nodeDict: dict[int, taxNode] = {}
 # Get a list of all unique rank values
@@ -190,6 +239,8 @@ with open("nodes.dmp") as file:
         linesProc = linesProc + 1
         if 0 == linesProc % 1000000:
             print(str(linesProc) + " lines processed")
+
+print("Taxonomic nodes linked")
 
 # Start with the root, all animals start with id 1
 root = treeNode(1)
@@ -209,11 +260,27 @@ for mzSpecies in mzNames["species"]:
     # Add the tax_id chain to the tree
     root.addToTree(tax_id_chain)
 
+print("Taxonomic tree created")
+
 # Compress the tree to remove redundant data
-root.compressTree()
+# root.compressTree()
+
+print("Taxonomic tree compressed")
+
+# Add names to the nodes in the tree
+root.addNamesToTree(nameDict, mzNames)
+
+print("Taxonomic tree named")
 
 # Print the tree to tree.dot
 with open("tree.dot", "w") as file:
     file.write("digraph g {\n")
-    root.printTree(nameDict, mzNames, file)
+    root.printTreeDot(file)
     file.write("}\n")
+
+print("DOT file generated")
+
+with open("tree.json", "w") as file:
+    root.printTreeJson(file)
+
+print("JSON file generated")
