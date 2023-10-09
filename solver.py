@@ -1,4 +1,5 @@
 import json
+import copy
 
 
 def countChildren(node) -> int:
@@ -71,6 +72,65 @@ def findBestGuessLargest(node) -> str:
         return findBestGuessLargest(bestChild)
     else:
         return node["name"]
+
+
+def getAllSpecies(node):
+    speciesList = []
+    if "children" in node.keys():
+        for child in node["children"]:
+            speciesList.extend(getAllSpecies(child))
+    else:
+        speciesList.append(node["name"])
+    return speciesList
+
+
+def findBestGuessExhaustive(originalNode) -> str:
+    # Get a list of all potential guesses
+    allSpecies = getAllSpecies(originalNode)
+
+    # Shortcut to always start with mink
+    if 255 == len(allSpecies):
+        return "mink"
+
+    fewestRemaining = 10000000
+
+    speciesChecked = 0
+    for possibleGuess in allSpecies:
+        # print(
+        #     "{0:0.2f}".format(100 * speciesChecked / len(allSpecies))
+        #     + " - checking "
+        #     + possibleGuess
+        # )
+        speciesChecked = speciesChecked + 1
+        numRemaining = 0
+        for possibleResult in allSpecies:
+            tree = copy.deepcopy(originalNode)
+
+            # Find the common group between the guess and the species
+            commonGroup = findCommonGroup(tree, possibleGuess, possibleResult)
+
+            # Set the new root to the common group
+            tree = newRoot(tree, commonGroup.lower())
+
+            if "children" in tree.keys():
+                # Cull the branch under the common group leading to the guess, since that was incorrect
+                groupList = findSpecies(tree, possibleGuess)
+                for idx in range(len(groupList)):
+                    if groupList[idx].lower() == commonGroup.lower():
+                        cullGroup(tree, groupList[idx + 1].lower())
+                        break
+
+            countChildren(tree)
+            numRemaining = numRemaining + tree["count"]
+
+        if (numRemaining / len(allSpecies)) < fewestRemaining:
+            fewestRemaining = numRemaining / len(allSpecies)
+            bestGuess = possibleGuess
+
+        # print(possibleGuess + " -> " + str(numRemaining / len(allSpecies)))
+
+    # print("BEST GUESS IS " + bestGuess + " WITH " + str(fewestRemaining) + " LEFT")
+    return bestGuess
 
 
 def newRoot(node, group):
@@ -151,7 +211,7 @@ def findCommonGroup(tree, guess, species):
     for idx in range(min(len(guessList), len(speciesList))):
         if guessList[idx] != speciesList[idx]:
             return guessList[idx - 1]
-    return None
+    return species
 
 
 def solveForSpecies(tree, species):
@@ -184,10 +244,6 @@ def solveForSpecies(tree, species):
         # Set the new root to the common group
         tree = newRoot(tree, commonGroup.lower())
 
-        if species == "tiger shark" and bestGuess == "rabbit":
-            with open("test.json", "w") as file:
-                json.dump(tree, file)
-
         # Cull the branch under the common group leading to the guess, since that was incorrect
         groupList = findSpecies(tree, bestGuess)
         for idx in range(len(groupList)):
@@ -217,6 +273,7 @@ def solveForSpecies(tree, species):
 #             print('"' + species + '", "' + str(guesses) + '"')
 #             totalSpecies = totalSpecies + 1
 #             totalGuesses = totalGuesses + guesses
+#             print("{0:0.2f}".format(100 * totalSpecies / len(mzSpecies["species"])))
 #     print("avg: " + str(totalGuesses / totalSpecies))
 
 

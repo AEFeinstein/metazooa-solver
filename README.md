@@ -26,17 +26,16 @@ python solver.py
 # Strategy
 
 The goal is to guess a species which will narrow the search space as much as possible for the next iteration.
-I tested two strategies for finding that species:
-1. Starting at the root of the taxonomic tree, go down the branch which has the most species in it and recurse until you reach a species.
-1. Starting at the root of the taxonomic tree, go down the branch which has closest to 50% of the remaining species in it and recurse until you reach a species.
-
-In testing, strategy 1 resulted in an average of 4.224 guesses, while strategy 2 resulted in an average of 4.627 guesses, so strategy 1 is about 0.4 guesses better on average.
+I tested three strategies for finding that species:
+1. Starting at the root of the taxonomic tree, go down the branch which has the most species in it and recurse until you reach a species. This has an average of **4.224** guesses per solution.
+1. Iterate through each species as a potential guess. For each guess, iterate through each species as a potential solution. For each combination of potential guess and potential solution, tally how many resulting species there would be. Pick the species with the smallest number of total resulting species. This is very slow. This has an average of **4.231** guesses per solution.
+1. Starting at the root of the taxonomic tree, go down the branch which has closest to 50% of the remaining species in it and recurse until you reach a species. This has an average of **4.627** guesses per solution.
 
 Once the tree is constructed, it is searched like so:
 
 1. Find the best guess and give it to the user.
     1. Count how many species each node in the tree has underneath it
-    1. Use one of the two aforementioned strategies to find the best guess species
+    1. Use one of the three aforementioned strategies to find the best guess species
 1. Get the common group between the unknown species and the guessed species from the user.
 1. Set the root of the tree to the common group (remove all species not in the common group).
 1. Remove the branch of the tree from below the root to the guessed species (remove all species that are too similar to the incorrectly guessed species).
