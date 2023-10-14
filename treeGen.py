@@ -1,5 +1,6 @@
 import re
 import json
+import sys
 
 
 class taxName:
@@ -195,9 +196,18 @@ class treeNode:
         file.write("}\n")
 
 
+useMetazooa = True
+if 1 < len(sys.argv):
+    if "metaflora" == sys.argv[1].lower():
+        useMetazooa = False
+
 # Read a list of all scientific names for metazooa species
-with open("sciNames.json") as file:
-    mzNames = json.load(file)
+if useMetazooa:
+    with open("sciNames.json") as file:
+        mzNames = json.load(file)
+else:
+    with open("sciNames-flora.json") as file:
+        mzNames = json.load(file)
 
 print("Metazooa scientific names loaded")
 
@@ -207,7 +217,13 @@ linesProc = 0
 with open("names.dmp") as file:
     for line in file:
         tn = taxName(line)
-        # Only care about scientific names
+
+        # Fix lemons and limes
+        if "Citrus x limon" == tn.name_txt:
+            tn.name_txt = "Citrus limon"
+        if "Citrus x aurantiifolia" == tn.name_txt:
+            tn.name_txt = "Citrus aurantiifolia"
+
         if tn.name_class == "scientific name":
             nameDict[tn.tax_id] = tn.name_txt
 
@@ -285,7 +301,11 @@ with open("tree.dot", "w") as file:
 
 print("DOT file generated")
 
-with open("tree.json", "w") as file:
-    root.printTreeJson(file)
+if useMetazooa:
+    with open("tree.json", "w") as file:
+        root.printTreeJson(file)
+else:
+    with open("tree-flora.json", "w") as file:
+        root.printTreeJson(file)
 
 print("JSON file generated")

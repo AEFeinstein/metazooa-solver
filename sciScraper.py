@@ -7,6 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 import json
 import time
+import sys
 
 
 def recursiveCheckChildren(children: list, commonName: str) -> str:
@@ -21,7 +22,7 @@ def recursiveCheckChildren(children: list, commonName: str) -> str:
     return None
 
 
-def findScientificName(guessName: str) -> str:
+def findScientificName(guessName: str, checkMetazooa: bool) -> str:
     # driver = webdriver.Firefox()
     # driver.get("https://metazooa.com/game?EnterGame=")
     # # guessInput: WebElement = driver.find_element('name', 'guess')
@@ -30,7 +31,11 @@ def findScientificName(guessName: str) -> str:
     # guessInput.send_keys(Keys.RETURN)
 
     driver = webdriver.Firefox()
-    driver.get("https://metazooa.com")  # This is a dummy website URL
+    if checkMetazooa:
+        driver.get("https://metazooa.com/")
+    else:
+        driver.get("https://flora.metazooa.com/")
+
     try:
         enterButton: WebElement = WebDriverWait(driver, 30).until(
             EC.presence_of_element_located((By.NAME, "EnterGame"))
@@ -54,23 +59,34 @@ def findScientificName(guessName: str) -> str:
 
 
 # Read a list of all species metazooa cares about
-with open("metazooa-species.json") as file:
+
+species_filename = "species.json"
+sciNames_filename = "sciNames.json"
+checkMetazooa = True
+if 1 < len(sys.argv):
+    if "metaflora" == sys.argv[1].lower():
+        species_filename = "species-flora.json"
+        sciNames_filename = "sciNames-flora.json"
+        checkMetazooa = False
+
+with open(species_filename) as file:
     mzSpecies = json.load(file)
 
-with open("sciNames.json", "w") as file:
+with open(sciNames_filename, "w") as file:
     file.write('{"species":[')
     first = True
     for species in mzSpecies["species"]:
         found = False
         while not found:
             try:
-                sciName = findScientificName(species)
+                sciName = findScientificName(species, checkMetazooa)
                 if first:
                     first = False
                     file.write("\n")
                 else:
                     file.write(",\n")
                 file.write('{"name":"' + species + '", "sciName":"' + sciName + '"}')
+                file.flush()
                 found = True
             except:
                 pass

@@ -1,5 +1,6 @@
 import json
 import copy
+import sys
 
 
 def countChildren(node) -> int:
@@ -276,8 +277,12 @@ def solveForSpecies(tree, species):
 #             print("{0:0.2f}".format(100 * totalSpecies / len(mzSpecies["species"])))
 #     print("avg: " + str(totalGuesses / totalSpecies))
 
+filename = "tree.json"
+if 1 < len(sys.argv):
+    if "metaflora" == sys.argv[1].lower():
+        filename = "tree-flora.json"
 
-with open("tree.json") as file:
+with open(filename) as file:
     tree = json.load(file)
 
     while True:
